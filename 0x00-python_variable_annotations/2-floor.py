@@ -8,7 +8,7 @@ and returns the floor
 import math
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """
     Floor the arg n and returns its floor
     """
