@@ -6,7 +6,7 @@ based on the key
 """
 
 
-from typing import TypeVar, Any, Mapping, Union
+from typing import TypeVar, Any, Mapping, Union, Optional
 
 
 T = TypeVar('T')
@@ -14,7 +14,7 @@ T = TypeVar('T')
 
 def safely_get_value(
         dct: Mapping, key: Any, default:
-        Union[Any, None] = None) -> Union[Any, T]:
+        Optional[T] = None) -> Union[Any, T]:
     """
     Retrieve the value from the dictionary for the given key.
     """
