@@ -4,20 +4,22 @@
 Validating with mypy.
 """
 
-from typing import Tuple, Any
+from typing import Tuple, Any, List
+
+
+from typing import List, Tuple, Any
 
 
 def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
     """
-    Return a tuple.
+    Zooms in the input tuple by repeating each element by the specified factor.
     """
-    zoomed_in: Tuple[Any, ...] = tuple(
-        item for item in lst for _ in range(factor))
-    return zoomed_in
+    zoomed_in: List[Any] = [item for item in lst for _ in range(factor)]
+    return tuple(zoomed_in)
 
 
-array: Tuple[int, ...] = (12, 72, 91)
+array: Tuple[int, int, int] = (12, 72, 91)
 
-zoom_2x = zoom_array(array)
+zoom_2x: Tuple[Any, ...] = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3)
+zoom_3x: Tuple[Any, ...] = zoom_array(array, 3)
