@@ -17,6 +17,6 @@ async def wait_random(max_delay=10):
     Waits for a random delay between 0 and 10
     and eventually returns.
     """
-    time = random.uniform(0, max_delay)
+    time = random.random() * max_delay
     await asyncio.sleep(time)
     return time
