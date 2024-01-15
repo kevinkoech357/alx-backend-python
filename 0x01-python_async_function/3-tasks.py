@@ -6,7 +6,7 @@ Returns asyncio.Task
 
 
 import asyncio
-#from typing import Any
+
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
